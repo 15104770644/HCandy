@@ -12,7 +12,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>生日快乐！</title>
+  <title>h有理，生日快乐！</title>
 
 
 </head>
@@ -33,7 +33,7 @@
   <canvas></canvas>
   <canvas></canvas>
   <canvas></canvas>
-  
+
   <script>
 
     function GetRequest() {
@@ -64,7 +64,7 @@
         this.timer = 0;
       }
       draw() {
-        ctx2.fillStyle = `hsl(${this.hue}, 100%, ${this.lightness}%)`;
+        ctx2.fillStyle = "hsl(".concat((void 0).hue, ", 100%, ").concat((void 0).lightness, "%)");
         ctx2.beginPath();
         ctx2.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
         ctx2.closePath();
@@ -132,7 +132,7 @@
         ctx2.save();
         ctx2.translate(this.x, this.y);
         ctx2.rotate(Math.atan2(this.ySpeed, this.xSpeed) + Math.PI / 2);
-        ctx2.fillStyle = `hsl(${this.hue}, 100%, 50%)`;
+        ctx2.fillStyle = "hsl(".concat((void 0).hue, ", 100%, 50%)");
         ctx2.fillRect(0, 0, 5, 15);
         ctx2.restore();
       }
@@ -162,17 +162,17 @@
     c2.width = c3.width = window.innerWidth;
     c2.height = c3.height = window.innerHeight;
     ctx1.fillStyle = '#000';
-    const text = '小C,生日快乐呀！'
+    const text = 'h有理，生日快乐！'
     let textWidth = 99999999;
 
     while (textWidth > window.innerWidth) {
-      ctx1.font = `900 ${fontSize--}px Arial`;
+      ctx1.font = "900 ".concat(fontSize--, "px Arial");
       textWidth = ctx1.measureText(text).width;
     }
 
     c1.width = textWidth;
     c1.height = fontSize * 1.5;
-    ctx1.font = `900 ${fontSize}px Arial`;
+    ctx1.font = "900 ".concat(fontSize, "px Arial");
     ctx1.fillText(text, 0, fontSize);
     const imgData = ctx1.getImageData(0, 0, c1.width, c1.height);
     for (let i = 0, max = imgData.data.length; i < max; i += 4) {
